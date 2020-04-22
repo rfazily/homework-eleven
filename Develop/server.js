@@ -14,6 +14,9 @@ var PORT = process.env.PORT || 3500;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Setting this folder up to be browser accessible
+app.use(express.static("public"));
+
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
