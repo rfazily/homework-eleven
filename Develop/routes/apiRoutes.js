@@ -57,5 +57,28 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
   // DELETING A POST
 
-  
+  app.delete("/api/notes/:id", function(req, res) {
+    // let chosen = req.params.id;        
+    // console.log(chosen);
+
+    let chosenId = parseInt(req.params.id);
+    console.log(chosenId);
+
+
+    for (let i = 0; i < notesData.length; i++) {
+        if (chosenId === notesData[i].id) {
+            // deleted notesData[i];
+            notesData.splice(i,1);
+            
+            let noteJSON = JSON.stringify(notesData, null, 2);
+
+            writeFileAsync("./db/db.json", noteJSON).then(function() {
+            console.log ("Chosen note has been deleted!");
+        });                 
+        }
+    }
+    res.json(notesData);
+});
+    
 };
+
