@@ -42,6 +42,11 @@ Application should allow users to view previously saved notes.
 
 Application should allow users to delete previously saved notes.
 
+# Screencastify
+
+Please demo the intended use of this tool using the screen recording here: 
+https://drive.google.com/file/d/138irE2t2XlDBLsblvuaEu-ihM--xoE-f/view
+
 
 - - -
 © 2020 Rayhana Fazily
